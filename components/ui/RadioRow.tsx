@@ -18,10 +18,10 @@ export function RadioRow({ label, selected, showFlag, compact, onPress, rightCon
         } ${selected ? "bg-primary/5 border border-primary/20" : "bg-inputBg"}`}
     >
       <View className="flex-row items-center gap-3">
-        <View className={`h-5 w-5 items-center justify-center rounded-full border-2 ${selected ? "border-primary" : "border-gray-300"} bg-white`}>
-          {selected ? (
-            <View className="h-2.5 w-2.5 rounded-full bg-primary" />
-          ) : null}
+        <View className={`h-5 w-5 items-center justify-center rounded-full ${selected ? "bg-primary border-2 border-primary" : "border-2 border-gray-300 bg-white"}`}>
+          {selected && (
+            <Text className="text-white text-[10px] font-bold">✓</Text>
+          )}
         </View>
         <Text className="text-[15px] font-normal text-textMain">{label}</Text>
       </View>

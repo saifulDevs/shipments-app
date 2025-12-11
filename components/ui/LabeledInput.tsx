@@ -15,7 +15,7 @@ export function LabeledInput({ label, value, onChangeText, placeholder }: Props)
       </Text>
       <View className="h-12 flex-row items-center rounded-xl bg-inputBg px-4">
         <TextInput
-          className="flex-1 text-[15px] text-textMain"
+          className="flex-1 h-full text-[15px] text-textMain rounded-xl"
           value={value}
           onChangeText={onChangeText}
           placeholder={placeholder}
