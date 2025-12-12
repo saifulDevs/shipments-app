@@ -14,7 +14,7 @@ type Props = {
 
 export function DestinationList({ selectedId, onSelect }: Props) {
   return (
-    <View className="gap-2.5">
+    <View className="gap-3">
       {destinations.map((item) => (
         <RadioRow
           key={item.id}

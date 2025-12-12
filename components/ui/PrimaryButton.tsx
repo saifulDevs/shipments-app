@@ -12,10 +12,10 @@ export function PrimaryButton({ label, onPress }: Props) {
       onPress={onPress}
       className="h-14 flex-row items-center justify-center rounded-xl bg-primary"
     >
-      <Text className="text-[16px] font-semibold text-white">
+      <Text className="text-base font-semibold text-white">
         {label}
       </Text>
-      <Text className="ml-2 text-xl text-white">›</Text>
+      <Text className="ml-2.5 text-xl text-white">›</Text>
     </Pressable>
   );
 }

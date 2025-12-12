@@ -7,10 +7,10 @@ type Props = ViewProps & {
   className?: string;
 };
 
-export function Card({ children, className = "", ...rest }: Props) {
+export function Card({ children, className = " bg-white", ...rest }: Props) {
   return (
     <View
-      className={`rounded-2xl bg-white px-4 py-5 shadow-card ${className}`}
+      className={`rounded-2xl px-4 py-4 shadow-card ${className}`}
       {...rest}
     >
       {children}

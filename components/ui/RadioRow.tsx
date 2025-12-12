@@ -14,16 +14,16 @@ export function RadioRow({ label, selected, showFlag, compact, onPress, rightCon
   return (
     <Pressable
       onPress={onPress}
-      className={`flex-row items-center justify-between rounded-xl px-4 ${compact ? "py-3" : "py-3.5"
-        } ${selected ? "bg-primary/5 border border-primary/20" : "bg-inputBg"}`}
+      className={`flex-row items-center justify-between rounded-xl px-4 ${compact ? "h-14" : "h-14"
+        } `}
     >
       <View className="flex-row items-center gap-3">
-        <View className={`h-5 w-5 items-center justify-center rounded-full ${selected ? "bg-primary border-2 border-primary" : "border-2 border-gray-300 bg-white"}`}>
+        <View className={`h-5 w-5 items-center justify-center rounded-full ${selected ? "bg-primary border-2 border-primary" : "border-2 border-textSubtle bg-white"}`}>
           {selected && (
-            <Text className="text-white text-[10px] font-bold">✓</Text>
+            <Text className="text-white text-xs font-bold">✓</Text>
           )}
         </View>
-        <Text className="text-[15px] font-normal text-textMain">{label}</Text>
+        <Text className="text-base font-normal leading-5 text-textMain">{label}</Text>
       </View>
 
       {rightContent || (showFlag ? (

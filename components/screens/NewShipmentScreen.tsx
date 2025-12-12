@@ -7,12 +7,13 @@ import { DestinationList } from "../ui/DestinationList";
 import { HeaderBar } from "../ui/HeaderBar";
 import { LabeledInput } from "../ui/LabeledInput";
 import { PrimaryButton } from "../ui/PrimaryButton";
+import { ShipIcon } from "../ui/ShipIcon";
 import { ShippingMethodList } from "../ui/ShippingMethodList";
 import { StepHeader } from "../ui/StepHeader";
 
 export function NewShipmentScreen() {
-  const [shipmentName, setShipmentName] = useState("Cyber Monday Items");
-  const [description, setDescription] = useState("Electronics");
+  const [shipmentName, setShipmentName] = useState("Black Friday Electronics");
+  const [description, setDescription] = useState("Laptop, Headphones, Smart Watch");
   const [selectedDestination, setSelectedDestination] = useState("anguilla");
   const [selectedMethod, setSelectedMethod] = useState("ocean");
 
@@ -28,24 +29,24 @@ export function NewShipmentScreen() {
   };
 
   return (
-    <View className="gap-7">
+    <View className="gap-6">
       <HeaderBar title="New shipment" />
 
       {/* Step 1 */}
-      <View className="gap-4">
+      <View className="">
         <StepHeader step={1} label="Enter shipment details" />
-        <Card className="gap-4">
+        <Card className="gap-3">
           <LabeledInput
             label="NAME YOUR SHIPMENT"
             value={shipmentName}
             onChangeText={setShipmentName}
-            placeholder="e.g. Summer Clothes"
+            placeholder="e.g. Holiday Shopping Package"
           />
           <LabeledInput
             label="SHIPMENT DESCRIPTION"
             value={description}
             onChangeText={setDescription}
-            placeholder="e.g. T-shirts, Shorts"
+            placeholder="e.g. Clothes, Electronics, Gifts"
           />
         </Card>
       </View>
@@ -53,26 +54,26 @@ export function NewShipmentScreen() {
       {/* Step 2 */}
       <View className="gap-4">
         <StepHeader step={2} label="Where is this shipment going?" />
-        <Card className="gap-5">
+        <Card className="bg-[#EFF7FF] gap-y-2 ">
           {/* shipsmart header */}
-          <View className="flex-row items-center gap-3">
-            <View className="h-10 w-10 items-center justify-center rounded-xl bg-primary/10">
+          <View className="flex-row items-center gap-3 border-b border-border pb-2">
+            <View className="h-10 w-10 items-center justify-center rounded-xl ">
               {/* simple logo square */}
-              <View className="h-6 w-6 rounded-md bg-primary" />
+              <ShipIcon size={20} />
             </View>
             <View className="flex-1">
-              <Text className="text-[15px] font-semibold text-textMain">
+              <Text className="text-[15px] font-semibold leading-5 text-textMain">
                 Ship with Shipsmart
               </Text>
-              <Text className="text-[11px] text-textSecondary">
+              <Text className="text-[11px] leading-4 text-textSubtle">
                 SHIP DIRECTLY TO YOUR ISLAND
               </Text>
             </View>
           </View>
 
           {/* destinations */}
-          <View className="gap-2">
-            <Text className="text-[13px] font-medium text-textSecondary">
+          <View className="gap-2.5 border-b border-gray-200">
+            <Text className="text-base font-medium text-textMain">
               Select a destination
             </Text>
             <DestinationList
@@ -82,8 +83,8 @@ export function NewShipmentScreen() {
           </View>
 
           {/* ship method */}
-          <View className="gap-2">
-            <Text className="text-[13px] font-medium text-textSecondary">
+          <View className="gap-2.5 ">
+            <Text className="text-base font-medium text-textMain">
               How do you want to ship?
             </Text>
             <ShippingMethodList
@@ -95,12 +96,12 @@ export function NewShipmentScreen() {
       </View>
 
       {/* Step 3 */}
-      <View className="gap-4">
+      <View className="">
         <StepHeader step={3} label="Select delivery address" />
         <AddressSection />
       </View>
 
-      <View className="mt-2">
+      <View className="mt-8">
         <PrimaryButton label="Save shipment" onPress={handleSave} />
       </View>
     </View>

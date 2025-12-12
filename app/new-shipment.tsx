@@ -19,8 +19,8 @@ export default function NewShipmentPage() {
                 }}
             />
             <ScrollView
-                style={[styles.container, { backgroundColor: isDark ? '#000' : '#F2F2F7' }]}
-                contentContainerStyle={{ padding: 20, paddingBottom: 40 }}
+                style={[styles.container, { backgroundColor: isDark ? '#000' : '#fff' }]}
+                contentContainerStyle={{ padding: 20, paddingTop: 60, paddingBottom: 40 }}
             >
                 <NewShipmentScreen />
             </ScrollView>

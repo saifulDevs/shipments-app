@@ -5,14 +5,21 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                primary: "#0055FF",
+                primary: "#2563EB",
+                primaryLight: "#EFF6FF",
                 textMain: "#000000",
-                textSecondary: "#8E8E93",
+                textSecondary: "#6B7280",
+                textSubtle: "#9CA3AF",
                 border: "#E5E5EA",
                 muted: "#F2F2F7",
                 danger: "#FF3B30",
                 dangerBg: "#FFE5E5",
                 inputBg: "#F9F9F9",
+            },
+            fontFamily: {
+                sans: ['CircularStd-Book', 'system-ui', 'sans-serif'],
+                medium: ['CircularStd-Medium', 'system-ui', 'sans-serif'],
+                bold: ['CircularStd-Bold', 'system-ui', 'sans-serif'],
             },
             boxShadow: {
                 sm: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
